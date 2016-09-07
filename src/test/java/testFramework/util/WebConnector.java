@@ -91,7 +91,7 @@ public class WebConnector {
     public void manageBrowser() {
         driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         System.out.println(js.executeScript("return window.innerWidth"));
         System.out.println(js.executeScript("return window.innerHeight"));
