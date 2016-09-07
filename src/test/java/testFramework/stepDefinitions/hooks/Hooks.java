@@ -24,7 +24,7 @@ public class Hooks extends WebConnector {
         if (scenario.isFailed()) {
             WebDriver augmentedDriver = new Augmenter().augment(driver);
             byte[] screenshot = ((TakesScreenshot) augmentedDriver).getScreenshotAs(OutputType.BYTES);
-            scenario.embed(screenshot, "image/jpeg");
+            scenario.embed(screenshot, "image/png");
         }
         driver.manage().deleteAllCookies();
     }
